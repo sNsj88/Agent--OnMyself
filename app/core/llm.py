@@ -14,5 +14,5 @@ def get_chat_model(streaming: bool = False) -> ChatOpenAI:
         base_url=settings.chat_base_url,
         api_key=settings.chat_api_key,
         streaming=streaming,
-        temperature=settings.chat_temperature,
+        temperature=settings.temperature,
     )

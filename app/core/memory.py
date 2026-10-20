@@ -21,9 +21,9 @@ class SessionStore:
 def trim_history(messages: list[BaseMessage], max_token: int) -> list[BaseMessage]:
     return trim_messages(
         messages,
-        strategy=trim_messages,
+        strategy="last",
         token_counter=count_tokens_approximately,
-        max_token=max_token,
+        max_tokens=max_token,
         start_on="human",
         allow_partial=False,
     )

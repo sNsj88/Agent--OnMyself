@@ -14,6 +14,6 @@ class Settings(BaseSettings):
     chat_api_key : str
 
     token_budget : int = 1000
-    temperature = 0.3
+    temperature: float = 0.3
 
 settings = Settings()

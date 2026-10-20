@@ -24,7 +24,7 @@ CUSTOMER_SERVICE_SYSTEM = """你是「喵喵优选」电商平台的智能客服
 CUSTOMER_SERVICE_PROMPT = ChatPromptTemplate.from_messages(
     [
         ("system", CUSTOMER_SERVICE_SYSTEM),
-        MessagesPlaceholder("history"),
+        MessagesPlaceholder("messages"),
     ]
 )
 

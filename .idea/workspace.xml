@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch01): PromptTemplate 集中管理(客服角色+提取任务)">
-      <change afterPath="$PROJECT_DIR$/app/core/llm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/dev.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch01): 创建模型工厂实现">
+      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/chat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_chat_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/llm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/prompts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +59,14 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python 测试.Python 测试 (test_config.py 内).executor": "Run",
     "Python 测试.Python 测试 (test_prompts.py 内).executor": "Run",
+    "Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试.executor": "Run",
+    "Python 测试.tests.test_chat_api.test_chat_streams_tokens_and_done 的 Python 测试.executor": "Run",
     "Python 测试.tests.test_config.test_账号相关的三项必填 的 Python 测试.executor": "Run",
     "Python 测试.tests.test_memory.test_store_append_and_get_isolated_by_session 的 Python 测试.executor": "Run",
     "Python 测试.tests.test_prompts.test_customer_service_prompt_renders_with_history 的 Python 测试.executor": "Run",
     "Python 测试.tests.test_schemas.test_chat_request_rejects_empty_message 的 Python 测试.executor": "Run",
     "Python 测试.tests.test_schemas.test_extract_request_rejects_empty_text 的 Python 测试.executor": "Run",
+    "Python.memory.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
@@ -87,7 +93,32 @@
       <recent name="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.dev.sh">
+  <component name="RunManager" selected="Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试">
+    <configuration name="memory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mewhelp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/core/memory.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="dev.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -103,7 +134,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Python 测试 (test_prompts.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="mewhelp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,11 +148,11 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_prompts.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;tests.test_chat_api.test_chat_persists_history_for_next_turn&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="tests.test_memory.test_store_append_and_get_isolated_by_session 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="tests.test_chat_api.test_chat_streams_tokens_and_done 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="mewhelp" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,7 +166,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_memory.test_store_append_and_get_isolated_by_session&quot;" />
+      <option name="_new_target" value="&quot;tests.test_chat_api.test_chat_streams_tokens_and_done&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -157,31 +188,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="tests.test_schemas.test_chat_request_rejects_empty_message 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="mewhelp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_schemas.test_chat_request_rejects_empty_message&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试" />
+        <item itemvalue="Python 测试.tests.test_chat_api.test_chat_streams_tokens_and_done 的 Python 测试" />
+        <item itemvalue="Python.memory" />
         <item itemvalue="Shell Script.dev.sh" />
         <item itemvalue="Python 测试.tests.test_prompts.test_customer_service_prompt_renders_with_history 的 Python 测试" />
-        <item itemvalue="Python 测试.Python 测试 (test_prompts.py 内)" />
-        <item itemvalue="Python 测试.tests.test_memory.test_store_append_and_get_isolated_by_session 的 Python 测试" />
-        <item itemvalue="Python 测试.tests.test_schemas.test_chat_request_rejects_empty_message 的 Python 测试" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +213,7 @@
       <option name="presentableId" value="Default" />
       <updated>1792390784794</updated>
       <workItem from="1792390785801" duration="3773000" />
-      <workItem from="1792463169221" duration="17182000" />
+      <workItem from="1792463169221" duration="22173000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -242,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792494733337</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(ch01): 创建模型工厂实现">
+      <option name="closed" value="true" />
+      <created>1792496604262</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1792496604262</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,13 +285,15 @@
     <MESSAGE value="feat(ch01): 对话与售后提取的schema" />
     <MESSAGE value="feat(ch01): 会话存储与token预算裁剪" />
     <MESSAGE value="feat(ch01): PromptTemplate 集中管理(客服角色+提取任务)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch01): PromptTemplate 集中管理(客服角色+提取任务)" />
+    <MESSAGE value="feat(ch01): 创建模型工厂实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch01): 创建模型工厂实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MewHelp$.coverage" NAME=" 覆盖结果" MODIFIED="1792494684607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MewHelp$memory.coverage" NAME="memory 覆盖结果" MODIFIED="1792501932519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/core" />
+    <SUITE FILE_PATH="coverage/MewHelp$.coverage" NAME=" 覆盖结果" MODIFIED="1792502105167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
