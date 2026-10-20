@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch01): 创建模型工厂实现">
-      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/chat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_chat_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/llm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/memory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/prompts.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch01): SSE 流式对话接口(多轮上下文+预算裁剪)">
+      <change afterPath="$PROJECT_DIR$/app/api/extract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +50,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "FastAPI.MewHelp.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python 测试.Python 测试 (test_config.py 内).executor": "Run",
     "Python 测试.Python 测试 (test_prompts.py 内).executor": "Run",
@@ -66,6 +61,7 @@
     "Python 测试.tests.test_prompts.test_customer_service_prompt_renders_with_history 的 Python 测试.executor": "Run",
     "Python 测试.tests.test_schemas.test_chat_request_rejects_empty_message 的 Python 测试.executor": "Run",
     "Python 测试.tests.test_schemas.test_extract_request_rejects_empty_text 的 Python 测试.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.memory.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -93,7 +89,58 @@
       <recent name="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试">
+  <component name="RunManager" selected="FastAPI.MewHelp">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="mewhelp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\.venv" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mewhelp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="memory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mewhelp" />
       <option name="ENV_FILES" value="" />
@@ -117,6 +164,41 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MewHelp" type="Python.FastAPI">
+      <option name="file" value="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\app\main.py" />
+      <module name="mewhelp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv/Scripts/python.exe" />
+      <option name="SDK_NAME" value="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\.venv" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FastAPI">
+      <module name="mewhelp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/.venv/Scripts/python.exe" />
+      <option name="SDK_NAME" value="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\.venv" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="dev.sh" type="ShConfigurationType" temporary="true">
@@ -170,31 +252,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="tests.test_prompts.test_customer_service_prompt_renders_with_history 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="mewhelp" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_prompts.test_customer_service_prompt_renders_with_history&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="FastAPI.MewHelp" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.memory" />
+      <item itemvalue="Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试" />
+      <item itemvalue="Python 测试.tests.test_chat_api.test_chat_streams_tokens_and_done 的 Python 测试" />
+      <item itemvalue="Shell Script.dev.sh" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试" />
         <item itemvalue="Python 测试.tests.test_chat_api.test_chat_streams_tokens_and_done 的 Python 测试" />
         <item itemvalue="Python.memory" />
         <item itemvalue="Shell Script.dev.sh" />
-        <item itemvalue="Python 测试.tests.test_prompts.test_customer_service_prompt_renders_with_history 的 Python 测试" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +285,7 @@
       <option name="presentableId" value="Default" />
       <updated>1792390784794</updated>
       <workItem from="1792390785801" duration="3773000" />
-      <workItem from="1792463169221" duration="22173000" />
+      <workItem from="1792463169221" duration="26649000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -263,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792496604262</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat(ch01): SSE 流式对话接口(多轮上下文+预算裁剪)">
+      <option name="closed" value="true" />
+      <created>1792502143354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1792502143354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +366,8 @@
     <MESSAGE value="feat(ch01): 会话存储与token预算裁剪" />
     <MESSAGE value="feat(ch01): PromptTemplate 集中管理(客服角色+提取任务)" />
     <MESSAGE value="feat(ch01): 创建模型工厂实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch01): 创建模型工厂实现" />
+    <MESSAGE value="feat(ch01): SSE 流式对话接口(多轮上下文+预算裁剪)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch01): SSE 流式对话接口(多轮上下文+预算裁剪)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -294,6 +375,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MewHelp$memory.coverage" NAME="memory 覆盖结果" MODIFIED="1792501932519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/core" />
+    <SUITE FILE_PATH="coverage/MewHelp$main.coverage" NAME="main 覆盖结果" MODIFIED="1792502170397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/MewHelp$.coverage" NAME=" 覆盖结果" MODIFIED="1792502105167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MewHelp$MewHelp.coverage" NAME="MewHelp 覆盖结果" MODIFIED="1792509110914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
