@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02): 测试模型可调用工具">
-      <change afterPath="$PROJECT_DIR$/app/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/db/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_db_conn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂">
+      <change afterPath="$PROJECT_DIR$/app/db/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +304,7 @@
       <workItem from="1792390785801" duration="3773000" />
       <workItem from="1792463169221" duration="26745000" />
       <workItem from="1792556219672" duration="3028000" />
-      <workItem from="1792559802141" duration="8643000" />
+      <workItem from="1792559802141" duration="9375000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -392,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792568882880</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂">
+      <option name="closed" value="true" />
+      <created>1792571431161</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1792571431161</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +421,8 @@
     <MESSAGE value="feat(ch01): SSE 结构化售后提取接口(with_structured_output)" />
     <MESSAGE value="feat(ch01): 加入前端静态页面，可联调" />
     <MESSAGE value="feat(ch02): 测试模型可调用工具" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02): 测试模型可调用工具" />
+    <MESSAGE value="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
