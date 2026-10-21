@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂">
-      <change afterPath="$PROJECT_DIR$/app/db/models.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02): 定义了Conversation/Message/Faq/Ticket四张表的ORM对象模型">
+      <change afterPath="$PROJECT_DIR$/app/db/repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -304,7 +304,7 @@
       <workItem from="1792390785801" duration="3773000" />
       <workItem from="1792463169221" duration="26745000" />
       <workItem from="1792556219672" duration="3028000" />
-      <workItem from="1792559802141" duration="9375000" />
+      <workItem from="1792559802141" duration="11961000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -394,7 +394,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792571431161</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat(ch02): 定义了Conversation/Message/Faq/Ticket四张表的ORM对象模型">
+      <option name="closed" value="true" />
+      <created>1792572152706</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1792572152706</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +430,8 @@
     <MESSAGE value="feat(ch01): 加入前端静态页面，可联调" />
     <MESSAGE value="feat(ch02): 测试模型可调用工具" />
     <MESSAGE value="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂" />
+    <MESSAGE value="feat(ch02): 定义了Conversation/Message/Faq/Ticket四张表的ORM对象模型" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02): 定义了Conversation/Message/Faq/Ticket四张表的ORM对象模型" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
