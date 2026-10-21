@@ -21,5 +21,7 @@ class Settings(BaseSettings):
 
     token_budget : int = 1000
     temperature: float = 0.3
+    database_url : str = "mysql+asyncmy://root:root@localhost:3306/mewhelp"
+    test_database_url : str= "mysql+asyncmy://root:root@localhost:3306/mewhelp"
 
 settings = Settings()
