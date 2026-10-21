@@ -1090,7 +1090,7 @@
       messagesEl.scrollTop = messagesEl.scrollHeight;
     }
 
-    // 读一条 SSE 流,按帧分发到 on.{delta,tool,citations,actions,interrupt};done 存 conversation_id;event: error 抛错
+    // 读一条 SSE 流,按帧分发到 on.{delta,tools,citations,actions,interrupt};done 存 conversation_id;event: error 抛错
     async function readSSEStream(resp, on) {
       if (!resp.ok || !resp.body) throw new Error("bad response");
       const reader = resp.body.getReader();

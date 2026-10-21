@@ -29,7 +29,7 @@ async def main() -> None:
     print("content:", repr(ai.content))
     print("tool_calls:", ai.tool_calls)
     if ai.tool_calls and ai.tool_calls[0]["name"] == "add":
-        print("✅ GO:Qwen3.8flash 支持 tool calling,选中 add,args=", ai.tool_calls[0]["args"])
+        print("✅ GO:Qwen3.8flash 支持 tools calling,选中 add,args=", ai.tool_calls[0]["args"])
     else:
         print("❌ NO-GO:未返回预期 tool_calls —— 停下来问用户,不自行换方案")
 
