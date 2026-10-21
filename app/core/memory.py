@@ -10,12 +10,12 @@ from langchain_core.messages.utils import count_tokens_approximately, trim_messa
 class SessionStore:
 
     def __init__(self):
-        self._session: dict[str, list[BaseMessage]] = {}
+        self._session: dict[int, list[BaseMessage]] = {}
 
-    def get(self, session_id: str) -> list[BaseMessage]:
+    def get(self, session_id: int) -> list[BaseMessage]:
         return self._session.get(session_id, [])
 
-    def append(self, session_id: str, *message: BaseMessage) -> None:
+    def append(self, session_id: int, *message: BaseMessage) -> None:
         self._session.setdefault(session_id, []).extend(message)
 
 def trim_history(messages: list[BaseMessage], max_token: int) -> list[BaseMessage]:

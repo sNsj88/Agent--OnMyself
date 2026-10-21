@@ -28,7 +28,7 @@ store = SessionStore()
 
 @router.post("")
 async def chat(req: ChatRequest, model: BaseChatModel = Depends(get_model)):
-    un_trim_message = [*store.get(req.session_id), HumanMessage(req.message)]
+    un_trim_message = [*store.get(req.conversation_id), HumanMessage(req.message)]
     trim_message = trim_history(un_trim_message, max_token=settings.token_budget)
     messages = CUSTOMER_SERVICE_PROMPT.format_messages(messages=trim_message)
 
@@ -48,7 +48,7 @@ async def chat(req: ChatRequest, model: BaseChatModel = Depends(get_model)):
             yield "event: error\n"
             yield f"data: {json.dumps({'message': '上游模型暂时不可用,请稍后重试'}, ensure_ascii=False)}\n\n"
             return
-        store.append(req.session_id, HumanMessage(req.message), AIMessage("".join(chunks)))
+        store.append(req.conversation_id, HumanMessage(req.message), AIMessage("".join(chunks)))
         yield "data: [DONE]\n\n"
 
     return StreamingResponse(event_stream(), media_type="text/event-stream")
