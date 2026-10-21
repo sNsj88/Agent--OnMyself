@@ -10,6 +10,8 @@ import random
 from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 from app.db import repository
+from typing import Annotated, Literal
+
 class OrderInput(BaseModel):
     order_id: str = Field(description="订单号,例如 1001")
 
@@ -65,3 +67,14 @@ async def query_faq(keyword: str) -> dict:
     if not rows:
         return {"hits": [], "message": f"未找到与「{keyword}」相关的常见问题"}
     return {"hits": [{"question": r.question, "answer": r.answer} for r in rows]}
+
+@tool
+async def create_ticket(
+    description: str,
+    ticket_type: Literal["售后", "投诉", "咨询"],
+    conversation_id: int,
+) -> dict:
+    """当用户问题需要人工介入(投诉、无法自助解决、明确要求人工)时,创建人工工单。
+    description 填用户问题描述,ticket_type 从 售后/投诉/咨询 中选。conversation_id 由系统填写,模型不要提供"""
+    ticket_no = await repository.create_ticket(conversation_id, description, ticket_type)
+    return {"ticket_no": ticket_no, "status": "已转人工"}
