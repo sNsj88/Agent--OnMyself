@@ -6,8 +6,14 @@
 """
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from pathlib import Path
+
+# 获取项目根目录（config.py 通常在 app/ 下，所以向上一级）
+ROOT_DIR = Path(__file__).resolve().parent.parent
+
+
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(env_file=ROOT_DIR / ".env", extra="ignore")
 
     chat_model : str
     chat_base_url : str
