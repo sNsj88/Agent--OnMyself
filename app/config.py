@@ -24,4 +24,11 @@ class Settings(BaseSettings):
     database_url : str = "mysql+asyncmy://root:root@localhost:3306/mewhelp"
     test_database_url : str= "mysql+asyncmy://root:root@localhost:3306/mewhelp"
 
+    embed_model: str
+
+    embed_base_url : str
+    embed_api_key : str
+    retrieval_top_k : int = 10
+    retrieval_min_score : float
+    milvus_uri: str = "data/milvus_knowledge.db"
 settings = Settings()
