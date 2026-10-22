@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02):  create_ticket 工具">
-      <change afterPath="$PROJECT_DIR$/app/tools/infra.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tools/registry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02):  提供工具注册表，和工具执行，及重试机制，信息返回包装">
+      <change beforePath="$PROJECT_DIR$/app/core/prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/prompts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +304,7 @@
       <workItem from="1792463169221" duration="26745000" />
       <workItem from="1792556219672" duration="3028000" />
       <workItem from="1792559802141" duration="14206000" />
-      <workItem from="1792633233653" duration="2963000" />
+      <workItem from="1792633233653" duration="3351000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -436,7 +434,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792576206852</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat(ch02):  提供工具注册表，和工具执行，及重试机制，信息返回包装">
+      <option name="closed" value="true" />
+      <created>1792636364856</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1792636364856</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +475,8 @@
     <MESSAGE value="feat(ch02): 三个 mock 工具(order/product/logistics,入参种子可复现)" />
     <MESSAGE value="feat(ch02):  query_faq 工具(查 faq 表 LIKE,未命中返回提示)" />
     <MESSAGE value="feat(ch02):  create_ticket 工具" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02):  create_ticket 工具" />
+    <MESSAGE value="feat(ch02):  提供工具注册表，和工具执行，及重试机制，信息返回包装" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02):  提供工具注册表，和工具执行，及重试机制，信息返回包装" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
