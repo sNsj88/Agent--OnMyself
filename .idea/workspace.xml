@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02):  query_faq 工具(查 faq 表 LIKE,未命中返回提示)">
-      <change beforePath="$PROJECT_DIR$/app/tools/business.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tools/business.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02):  create_ticket 工具">
+      <change afterPath="$PROJECT_DIR$/app/tools/infra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tools/registry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,46 +54,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "FastAPI.MewHelp.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python 测试.Python 测试 (test_config.py 内).executor": "Run",
-    "Python 测试.Python 测试 (test_prompts.py 内).executor": "Run",
-    "Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试.executor": "Run",
-    "Python 测试.tests.test_chat_api.test_chat_streams_tokens_and_done 的 Python 测试.executor": "Run",
-    "Python 测试.tests.test_config.test_账号相关的三项必填 的 Python 测试.executor": "Run",
-    "Python 测试.tests.test_db_conn.test_test_db_reachable_and_tables_exist 的 Python 测试.executor": "Run",
-    "Python 测试.tests.test_memory.test_store_append_and_get_isolated_by_session 的 Python 测试.executor": "Run",
-    "Python 测试.tests.test_prompts.test_customer_service_prompt_renders_with_history 的 Python 测试.executor": "Run",
-    "Python 测试.tests.test_schemas.test_chat_request_rejects_empty_message 的 Python 测试.executor": "Run",
-    "Python 测试.tests.test_schemas.test_extract_request_rejects_empty_text 的 Python 测试.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.memory.executor": "Run",
-    "Python.smoke_toolcall.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHELLCHECK.PATH": "C:\\Users\\lsj\\AppData\\Roaming\\JetBrains\\PyCharm2026.2\\plugins\\Shell Script\\shellcheck.exe",
-    "Shell Script.dev.sh.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/MewHelp智能客服项目-小林coding/MewHelp自主实现/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;FastAPI.MewHelp.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python 测试.Python 测试 (test_config.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.Python 测试 (test_prompts.py 内).executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_chat_api.test_chat_persists_history_for_next_turn 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_chat_api.test_chat_streams_tokens_and_done 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_config.test_账号相关的三项必填 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_db_conn.test_test_db_reachable_and_tables_exist 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_memory.test_store_append_and_get_isolated_by_session 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_prompts.test_customer_service_prompt_renders_with_history 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_schemas.test_chat_request_rejects_empty_message 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python 测试.tests.test_schemas.test_extract_request_rejects_empty_text 的 Python 测试.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.memory.executor&quot;: &quot;Run&quot;,
+    &quot;Python.smoke_toolcall.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\lsj\\AppData\\Roaming\\JetBrains\\PyCharm2026.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
+    &quot;Shell Script.dev.sh.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/MewHelp智能客服项目-小林coding/MewHelp自主实现/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\app" />
@@ -303,7 +305,8 @@
       <workItem from="1792390785801" duration="3773000" />
       <workItem from="1792463169221" duration="26745000" />
       <workItem from="1792556219672" duration="3028000" />
-      <workItem from="1792559802141" duration="13246000" />
+      <workItem from="1792559802141" duration="14206000" />
+      <workItem from="1792633233653" duration="2963000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -425,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792575695738</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat(ch02):  create_ticket 工具">
+      <option name="closed" value="true" />
+      <created>1792576206852</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1792576206852</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +468,8 @@
     <MESSAGE value="feat(ch02): 数据访问层 repository(会话/消息/faq/工单 CRUD)" />
     <MESSAGE value="feat(ch02): 三个 mock 工具(order/product/logistics,入参种子可复现)" />
     <MESSAGE value="feat(ch02):  query_faq 工具(查 faq 表 LIKE,未命中返回提示)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02):  query_faq 工具(查 faq 表 LIKE,未命中返回提示)" />
+    <MESSAGE value="feat(ch02):  create_ticket 工具" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02):  create_ticket 工具" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
