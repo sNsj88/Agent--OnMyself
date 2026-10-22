@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02):  客服+工具 system prompt(工具使用原则)">
-      <change afterPath="$PROJECT_DIR$/app/core/agent.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch02):  拼接上下文，执行tool_calls，落库，最终返回已调用工具的大模型回答（流式与非流式）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/chat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       <recent name="E:\MewHelp智能客服项目-小林coding\MewHelp自主实现\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.tests.test_db_conn.test_test_db_reachable_and_tables_exist 的 Python 测试">
+  <component name="RunManager" selected="FastAPI.MewHelp">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="mewhelp" />
       <option name="ENV_FILES" value="" />
@@ -305,7 +308,7 @@
       <workItem from="1792463169221" duration="26745000" />
       <workItem from="1792556219672" duration="3028000" />
       <workItem from="1792559802141" duration="14206000" />
-      <workItem from="1792633233653" duration="5961000" />
+      <workItem from="1792633233653" duration="11457000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -451,7 +454,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792636710312</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat(ch02):  拼接上下文，执行tool_calls，落库，最终返回已调用工具的大模型回答（流式与非流式）">
+      <option name="closed" value="true" />
+      <created>1792639823576</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1792639823576</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +497,8 @@
     <MESSAGE value="feat(ch02):  create_ticket 工具" />
     <MESSAGE value="feat(ch02):  提供工具注册表，和工具执行，及重试机制，信息返回包装" />
     <MESSAGE value="feat(ch02):  客服+工具 system prompt(工具使用原则)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02):  客服+工具 system prompt(工具使用原则)" />
+    <MESSAGE value="feat(ch02):  拼接上下文，执行tool_calls，落库，最终返回已调用工具的大模型回答（流式与非流式）" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch02):  拼接上下文，执行tool_calls，落库，最终返回已调用工具的大模型回答（流式与非流式）" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -496,7 +508,7 @@
     <SUITE FILE_PATH="coverage/MewHelp$memory.coverage" NAME="memory 覆盖结果" MODIFIED="1792501932519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/core" />
     <SUITE FILE_PATH="coverage/MewHelp$main.coverage" NAME="main 覆盖结果" MODIFIED="1792558252490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/MewHelp$.coverage" NAME=" 覆盖结果" MODIFIED="1792571109905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MewHelp$MewHelp.coverage" NAME="MewHelp 覆盖结果" MODIFIED="1792561155510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/MewHelp$MewHelp.coverage" NAME="MewHelp 覆盖结果" MODIFIED="1792650081132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/MewHelp$smoke_toolcall.coverage" NAME="smoke_toolcall 覆盖结果" MODIFIED="1792568771264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>

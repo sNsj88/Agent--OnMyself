@@ -32,7 +32,7 @@ class Message(Base):
     conversation_id: Mapped[int] = mapped_column(
         BigInteger, ForeignKey("conversations.id")
     )
-    role: Mapped[str] = mapped_column(Enum("user", "assistant", "tools"))
+    role: Mapped[str] = mapped_column(Enum("user", "assistant", "tool"))
     content: Mapped[str | None] = mapped_column(Text, nullable=True)
     tool_calls: Mapped[list | None] = mapped_column(JSON, nullable=True)
     tool_call_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
