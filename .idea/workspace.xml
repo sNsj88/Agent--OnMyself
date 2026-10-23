@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03): RAG，问题去重函数">
-      <change afterPath="$PROJECT_DIR$/app/kb/mining.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/prompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/repository.py" afterDir="false" />
-    </list>
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03): RAG，从历史对话中挖掘问答对，写到Mysql的数据库中，但未向量化" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -309,7 +304,7 @@
       <workItem from="1792559802141" duration="14206000" />
       <workItem from="1792633233653" duration="13428000" />
       <workItem from="1792721543910" duration="791000" />
-      <workItem from="1792727934111" duration="14632000" />
+      <workItem from="1792727934111" duration="15051000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -575,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792748568711</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="feat(ch03): RAG，从历史对话中挖掘问答对，写到Mysql的数据库中，但未向量化">
+      <option name="closed" value="true" />
+      <created>1792760064623</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1792760064623</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(ch01): 加入前端静态页面，可联调" />
     <MESSAGE value="feat(ch02): 测试模型可调用工具" />
     <MESSAGE value="feat(ch02): 定义了mysql容器，创建异步引擎和异步会话工厂" />
     <MESSAGE value="feat(ch02): 定义了Conversation/Message/Faq/Ticket四张表的ORM对象模型" />
@@ -618,7 +620,8 @@
     <MESSAGE value="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'" />
     <MESSAGE value="feat(ch03): RAG，将知识库切分为chunks存入Mysql，并向量化，存入milvus" />
     <MESSAGE value="feat(ch03): RAG，问题去重函数" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03): RAG，问题去重函数" />
+    <MESSAGE value="feat(ch03): RAG，从历史对话中挖掘问答对，写到Mysql的数据库中，但未向量化" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03): RAG，从历史对话中挖掘问答对，写到Mysql的数据库中，但未向量化" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
