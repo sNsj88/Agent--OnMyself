@@ -6,7 +6,7 @@
 """
 # app/tools/business.py
 import random
-
+from app.core import retrieval
 from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 from app.db import repository
@@ -63,7 +63,7 @@ class FaqInput(BaseModel):
 @tool(args_schema=FaqInput)
 async def query_faq(keyword: str) -> dict:
     """根据关键词查询常见问题解答(FAQ)。用于用户咨询政策、规则、操作流程等通用问题时。"""
-    rows = await repository.search_faq(keyword)
+    rows = await retrieval.search_knowledge(keyword)
     if not rows:
         return {"hits": [], "message": f"未找到与「{keyword}」相关的常见问题"}
     return {"hits": [{"question": r.question, "answer": r.answer} for r in rows]}
