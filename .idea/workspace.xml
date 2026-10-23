@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03):  RAG模块，提供数据库操作函数，连接，建集合，筛选查找">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/models.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03):  RAG模块，知识库分块表ORM模型定义，和问答对提取暂存表ORM模型定义">
+      <change beforePath="$PROJECT_DIR$/app/db/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/repository.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +306,7 @@
       <workItem from="1792559802141" duration="14206000" />
       <workItem from="1792633233653" duration="13428000" />
       <workItem from="1792721543910" duration="791000" />
-      <workItem from="1792727934111" duration="4907000" />
+      <workItem from="1792727934111" duration="5833000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -493,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792732110950</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat(ch03):  RAG模块，知识库分块表ORM模型定义，和问答对提取暂存表ORM模型定义">
+      <option name="closed" value="true" />
+      <created>1792739629105</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1792739629105</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +540,8 @@
     <MESSAGE value="feat(ch03):  RAG模块.env和config中添加字段" />
     <MESSAGE value="feat(ch03):  RAG模块，提供文本块和单句语句的向量化函数" />
     <MESSAGE value="feat(ch03):  RAG模块，提供数据库操作函数，连接，建集合，筛选查找" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03):  RAG模块，提供数据库操作函数，连接，建集合，筛选查找" />
+    <MESSAGE value="feat(ch03):  RAG模块，知识库分块表ORM模型定义，和问答对提取暂存表ORM模型定义" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03):  RAG模块，知识库分块表ORM模型定义，和问答对提取暂存表ORM模型定义" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
