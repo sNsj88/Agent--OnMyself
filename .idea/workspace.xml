@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'">
-      <change afterPath="$PROJECT_DIR$/app/kb/dualwrite.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03): RAG，将知识库切分为chunks存入Mysql，并向量化，存入milvus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -307,7 +306,7 @@
       <workItem from="1792559802141" duration="14206000" />
       <workItem from="1792633233653" duration="13428000" />
       <workItem from="1792721543910" duration="791000" />
-      <workItem from="1792727934111" duration="11063000" />
+      <workItem from="1792727934111" duration="12205000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -557,7 +556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792745612765</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feat(ch03): RAG，将知识库切分为chunks存入Mysql，并向量化，存入milvus">
+      <option name="closed" value="true" />
+      <created>1792747030157</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1792747030157</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(ch01): SSE 流式对话接口(多轮上下文+预算裁剪)" />
     <MESSAGE value="feat(ch01): SSE 结构化售后提取接口(with_structured_output)" />
     <MESSAGE value="feat(ch01): 加入前端静态页面，可联调" />
     <MESSAGE value="feat(ch02): 测试模型可调用工具" />
@@ -600,7 +606,8 @@
     <MESSAGE value="feat(ch03):  RAG模块，文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'" />
-    <option name="LAST_COMMIT_MESSAGE" value="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'" />
+    <MESSAGE value="feat(ch03): RAG，将知识库切分为chunks存入Mysql，并向量化，存入milvus" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03): RAG，将知识库切分为chunks存入Mysql，并向量化，存入milvus" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
