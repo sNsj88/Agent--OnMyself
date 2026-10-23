@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03):  RAG模块，知识 chunk + 暂存表 repository CRUD">
-      <change afterPath="$PROJECT_DIR$/app/kb/chunking.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03):  RAG模块，md标题分割器和递归字符文本分割器">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/kb/chunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/kb/chunking.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +307,7 @@
       <workItem from="1792559802141" duration="14206000" />
       <workItem from="1792633233653" duration="13428000" />
       <workItem from="1792721543910" duration="791000" />
-      <workItem from="1792727934111" duration="6596000" />
+      <workItem from="1792727934111" duration="7495000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -508,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792740907854</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feat(ch03):  RAG模块，md标题分割器和递归字符文本分割器">
+      <option name="closed" value="true" />
+      <created>1792741663462</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1792741663462</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +559,8 @@
     <MESSAGE value="feat(ch03):  RAG模块，提供数据库操作函数，连接，建集合，筛选查找" />
     <MESSAGE value="feat(ch03):  RAG模块，知识库分块表ORM模型定义，和问答对提取暂存表ORM模型定义" />
     <MESSAGE value="feat(ch03):  RAG模块，知识 chunk + 暂存表 repository CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03):  RAG模块，知识 chunk + 暂存表 repository CRUD" />
+    <MESSAGE value="feat(ch03):  RAG模块，md标题分割器和递归字符文本分割器" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03):  RAG模块，md标题分割器和递归字符文本分割器" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
