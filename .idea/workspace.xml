@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03):  RAG模块，大表格按行切 split_table_rows(每块复制表头)">
-      <change afterPath="$PROJECT_DIR$/app/kb/documents.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'">
+      <change afterPath="$PROJECT_DIR$/app/kb/dualwrite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -307,7 +307,7 @@
       <workItem from="1792559802141" duration="14206000" />
       <workItem from="1792633233653" duration="13428000" />
       <workItem from="1792721543910" duration="791000" />
-      <workItem from="1792727934111" duration="8905000" />
+      <workItem from="1792727934111" duration="11063000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -533,7 +533,31 @@
       <option name="project" value="LOCAL" />
       <updated>1792743187216</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="feat(ch03):  RAG模块，大表格按行切 split_table_rows(每块复制表头)">
+      <option name="closed" value="true" />
+      <created>1792744869911</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1792744869911</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat(ch03):  RAG模块，文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks">
+      <option name="closed" value="true" />
+      <created>1792744904587</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1792744904587</updated>
+    </task>
+    <task id="LOCAL-00031" summary="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'">
+      <option name="closed" value="true" />
+      <created>1792745612765</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1792745612765</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,9 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(ch01): 会话存储与token预算裁剪" />
-    <MESSAGE value="feat(ch01): PromptTemplate 集中管理(客服角色+提取任务)" />
-    <MESSAGE value="feat(ch01): 创建模型工厂实现" />
     <MESSAGE value="feat(ch01): SSE 流式对话接口(多轮上下文+预算裁剪)" />
     <MESSAGE value="feat(ch01): SSE 结构化售后提取接口(with_structured_output)" />
     <MESSAGE value="feat(ch01): 加入前端静态页面，可联调" />
@@ -576,7 +597,10 @@
     <MESSAGE value="feat(ch03):  RAG模块，md标题分割器和递归字符文本分割器" />
     <MESSAGE value="feat(ch03):  RAG模块，句末重叠裁剪 apply_sentence_overlap(整句重叠,不留半截话)" />
     <MESSAGE value="feat(ch03):  RAG模块，大表格按行切 split_table_rows(每块复制表头)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03):  RAG模块，大表格按行切 split_table_rows(每块复制表头)" />
+    <MESSAGE value="feat(ch03):  RAG模块，文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'" />
+    <option name="LAST_COMMIT_MESSAGE" value="文档切分顶层接口，调用md文档标题切、递归字符切、相邻chunk首尾句子重叠、表格切分，组成chunks'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
