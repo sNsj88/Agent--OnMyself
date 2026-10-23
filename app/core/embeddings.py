@@ -4,7 +4,6 @@
 @Desc:
 @Time: 2026/10/22 16:09
 """
-from idlelib import autocomplete_w
 
 from openai import AsyncOpenAI
 

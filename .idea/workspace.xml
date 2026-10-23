@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03):  RAG模块.env和config中添加字段">
-      <change afterPath="$PROJECT_DIR$/app/core/embeddings.py" afterDir="false" />
+    <list default="true" id="b1adc1ad-5654-4d60-9d15-85520bc2c2b4" name="更改" comment="feat(ch03):  RAG模块，提供文本块和单句语句的向量化函数">
+      <change afterPath="$PROJECT_DIR$/app/kb/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/kb/milvus_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/embeddings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/embeddings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +307,9 @@
       <workItem from="1792463169221" duration="26745000" />
       <workItem from="1792556219672" duration="3028000" />
       <workItem from="1792559802141" duration="14206000" />
-      <workItem from="1792633233653" duration="13174000" />
+      <workItem from="1792633233653" duration="13428000" />
+      <workItem from="1792721543910" duration="791000" />
+      <workItem from="1792727934111" duration="2922000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ch01): 项目脚手架与配置加载">
       <option name="closed" value="true" />
@@ -475,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792656095981</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat(ch03):  RAG模块，提供文本块和单句语句的向量化函数">
+      <option name="closed" value="true" />
+      <created>1792657071589</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1792657071589</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +525,8 @@
     <MESSAGE value="feat(ch02):  拼接上下文，执行tool_calls，落库，最终返回已调用工具的大模型回答（流式与非流式）" />
     <MESSAGE value="feat(ch02):  Function Calling连通" />
     <MESSAGE value="feat(ch03):  RAG模块.env和config中添加字段" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03):  RAG模块.env和config中添加字段" />
+    <MESSAGE value="feat(ch03):  RAG模块，提供文本块和单句语句的向量化函数" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ch03):  RAG模块，提供文本块和单句语句的向量化函数" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
